@@ -41,15 +41,17 @@
     <style>
         /* Custom CSS for glassmorphism and animations */
         .glass {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         
         .glass-dark {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.05);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
         }
         
         /* Particle animation background */
@@ -65,7 +67,7 @@
         
         .particle {
             position: absolute;
-            background: rgba(59, 130, 246, 0.3);
+            background: rgba(59, 130, 246, 0.2);
             border-radius: 50%;
             animation: float 6s ease-in-out infinite;
         }
@@ -81,7 +83,7 @@
         }
         
         ::-webkit-scrollbar-track {
-            background: #1a1a1a;
+            background: #f1f5f9;
         }
         
         ::-webkit-scrollbar-thumb {
@@ -103,30 +105,41 @@
         
         /* Glow effect */
         .glow {
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
         }
         
         .glow:hover {
-            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Logo styling */
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: cover;
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-inter min-h-screen">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-800 font-inter min-h-screen">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 glass-dark">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-poppins font-bold gradient-text">
-                    Akbar Rafan
+                <div class="flex items-center space-x-3">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiByeD0iOCIgZmlsbD0iIzAwMCIvPgo8IS0tIExlZnQgaGFsZiBodW1hbiAtLT4KPHBhdGggZD0iTTAgMEgyMFY0MEgwVjBaIiBmaWxsPSJ1cmwoI2dyYWRpZW50MCkiLz4KPHBhdGggZD0iTTUgMTBIMTVMMTAgMTVMMTUgMjBIMTVMMTAgMTVaIiBmaWxsPSIjMDA3N0ZGIi8+CjwhLS0gUmlnaHQgaGFsZiBBSSAtLT4KPHBhdGggZD0iTTIwIDBINDBWNDBIMjBWMDBaIiBmaWxsPSIjMDA0N0E2Ii8+CjxwYXRoIGQ9Ik0yMiA4SDI2VjEwSDI4VjEySDI2VjE0SDI0VjEySDIyVjEwSDI0VjhIMjJaIiBmaWxsPSIjMDBGNUZGIi8+CjxwYXRoIGQ9Ik0yOCA4SDMyVjEwSDM0VjEySDMyVjE0SDMwVjEySDI4VjEwSDMwVjhIMjhaIiBmaWxsPSIjMDBGNUZGIi8+CjxwYXRoIGQ9Ik0yMiAxNkgyNlYxOEgyOFYyMEgyNlYyMkgyNFYyMEgyMlYxOEgyNFYxNkgyMloiIGZpbGw9IiMwMEY1RkYiLz4KPHBhdGggZD0iTTI4IDE2SDMyVjE4SDM0VjIwSDMyVjIySDMwVjIwSDI4VjE4SDMwVjE2SDI4WiIgZmlsbD0iIzAwRjVGRiIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJncmFkaWVudDAiIHgxPSIwIiB5MT0iMCIgeDI9IjIwIiB5Mj0iNDAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agc3RvcC1jb2xvcj0iI0ZGNzAwMCIvPgo8c3RvcCBvZmZzZXQ9IjAuNSIgc3RvcC1jb2xvcj0iI0ZGRkYwMCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNGRjAwMDAiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K" alt="AI Logo" class="logo">
+                    <div class="text-2xl font-poppins font-bold gradient-text">
+                        Akbar Rafan
+                    </div>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="hover:text-blue-400 transition-colors duration-300">About</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors duration-300">Projects</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors duration-300">Contact</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Contact</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white">
+                    <button id="mobile-menu-btn" class="text-gray-700">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -136,9 +149,9 @@
             <!-- Mobile menu -->
             <div id="mobile-menu" class="hidden md:hidden pb-4">
                 <div class="flex flex-col space-y-2">
-                    <a href="#about" class="hover:text-blue-400 transition-colors duration-300 py-2">About</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors duration-300 py-2">Projects</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors duration-300 py-2">Contact</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">About</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors duration-300 py-2">Contact</a>
                 </div>
             </div>
         </div>
@@ -155,10 +168,10 @@
                 <h1 class="text-5xl md:text-7xl font-poppins font-bold mb-6">
                     <span class="gradient-text">Akbar Rafan</span>
                 </h1>
-                <h2 class="text-2xl md:text-3xl font-poppins font-semibold mb-4 text-blue-400">
+                <h2 class="text-2xl md:text-3xl font-poppins font-semibold mb-4 text-blue-600">
                     AI Solutions & Agentic Automations Developer
                 </h2>
-                <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
+                <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
                     Transforming businesses through intelligent automation and cutting-edge AI solutions. 
                     Based in Dhaka, Bangladesh, I specialize in creating sophisticated AI systems that 
                     revolutionize how companies interact with their customers and manage their operations.
@@ -167,7 +180,7 @@
                     <a href="#projects" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 glow">
                         View My Work
                     </a>
-                    <a href="#contact" class="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    <a href="#contact" class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                         Get In Touch
                     </a>
                 </div>
@@ -176,9 +189,9 @@
             <!-- Profile Image -->
             <div class="flex justify-center lg:justify-end">
                 <div class="relative">
-                    <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-blue-400/30 glow">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                             alt="Akbar Rafan" 
+                    <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-blue-500/30 glow">
+                        <img src="./akbar-rafan-profile.jpg.png" 
+                             alt="Akbar Rafan - Professional headshot with dark suit, light grey shirt, dark tie with blue stripes, and red pocket square against bright green background" 
                              class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -top-4 -right-4 w-20 h-20 bg-blue-500 rounded-full flex items-center justify-center animate-bounce-slow">
@@ -190,11 +203,11 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 bg-gray-800/50">
+    <section id="about" class="py-20 bg-white/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-poppins font-bold mb-4 gradient-text">About Me</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Passionate about creating intelligent solutions that bridge the gap between human creativity and machine efficiency.
                 </p>
             </div>
@@ -202,21 +215,21 @@
             <div class="glass rounded-2xl p-8 md:p-12 mb-12">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-400">My Journey</h3>
-                        <p class="text-gray-300 leading-relaxed mb-6">
+                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-600">My Journey</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
                             With a deep passion for artificial intelligence and automation, I've dedicated my career to 
                             developing cutting-edge solutions that transform how businesses operate. My expertise spans 
                             across AI-powered voice assistants, automated lead nurturing systems, and intelligent 
                             marketing automation platforms.
                         </p>
-                        <p class="text-gray-300 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed">
                             Based in Dhaka, Bangladesh, I work with clients worldwide to implement sophisticated 
                             AI solutions that not only solve immediate problems but also create sustainable competitive 
                             advantages through intelligent automation.
                         </p>
                     </div>
                     <div>
-                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-400">Core Expertise</h3>
+                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-600">Core Expertise</h3>
                         <div class="grid grid-cols-2 gap-4">
                             <div class="glass-dark rounded-lg p-4 text-center hover:transform hover:scale-105 transition-all duration-300">
                                 <div class="text-2xl mb-2">🤖</div>
@@ -246,7 +259,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-poppins font-bold mb-4 gradient-text">Featured Projects</h2>
-                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Innovative AI solutions that are transforming businesses and creating exceptional user experiences.
                 </p>
             </div>
@@ -255,8 +268,8 @@
                 <!-- Project 1 -->
                 <div class="glass rounded-2xl p-6 hover:transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
                     <div class="text-4xl mb-4">🏢</div>
-                    <h3 class="text-xl font-poppins font-semibold mb-3 text-blue-400">The AI-Powered Front Desk</h3>
-                    <p class="text-gray-300 mb-4 leading-relaxed">
+                    <h3 class="text-xl font-poppins font-semibold mb-3 text-blue-600">The AI-Powered Front Desk</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
                         Solves the critical problem of missed calls and lost leads by deploying a hyper-realistic AI voice assistant. 
                         This AI answers calls 24/7, qualifies leads, answers property FAQs, and books showings directly into agents' calendars, 
                         with a seamless "warm transfer" to a human for high-intent callers.
@@ -266,7 +279,7 @@
                         <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Lead Qualification</span>
                         <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">24/7 Availability</span>
                     </div>
-                    <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold group-hover:underline">
+                    <a href="#" class="text-blue-600 hover:text-blue-500 font-semibold group-hover:underline">
                         Learn More →
                     </a>
                 </div>
@@ -274,8 +287,8 @@
                 <!-- Project 2 -->
                 <div class="glass rounded-2xl p-6 hover:transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
                     <div class="text-4xl mb-4">📧</div>
-                    <h3 class="text-xl font-poppins font-semibold mb-3 text-blue-400">Automated Lead Nurturing & Follow-up</h3>
-                    <p class="text-gray-300 mb-4 leading-relaxed">
+                    <h3 class="text-xl font-poppins font-semibold mb-3 text-blue-600">Automated Lead Nurturing & Follow-up</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
                         Addresses the issue of leads going cold due to inconsistent manual follow-up. This system designs and implements 
                         AI-powered, multi-channel (SMS, email) follow-up sequences that are triggered by lead behavior, using AI to generate 
                         hyper-personalized content that references specific properties and inquiries.
@@ -285,7 +298,7 @@
                         <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Personalization</span>
                         <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Behavior Triggered</span>
                     </div>
-                    <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold group-hover:underline">
+                    <a href="#" class="text-blue-600 hover:text-blue-500 font-semibold group-hover:underline">
                         Learn More →
                     </a>
                 </div>
@@ -293,8 +306,8 @@
                 <!-- Project 3 -->
                 <div class="glass rounded-2xl p-6 hover:transform hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 group">
                     <div class="text-4xl mb-4">🎨</div>
-                    <h3 class="text-xl font-poppins font-semibold mb-3 text-blue-400">AI-Powered Property Marketing Suite</h3>
-                    <p class="text-gray-300 mb-4 leading-relaxed">
+                    <h3 class="text-xl font-poppins font-semibold mb-3 text-blue-600">AI-Powered Property Marketing Suite</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
                         Solves the creative and time bottleneck of producing high-quality marketing content for every listing. 
                         From a few property details and photos, this automated system generates compelling listing descriptions, 
                         social media posts, and even AI-generated "before/after" renders or virtual tour videos, trained on the agent's specific brand voice.
@@ -304,7 +317,7 @@
                         <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">Brand Voice</span>
                         <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Visual AI</span>
                     </div>
-                    <a href="#" class="text-blue-400 hover:text-blue-300 font-semibold group-hover:underline">
+                    <a href="#" class="text-blue-600 hover:text-blue-500 font-semibold group-hover:underline">
                         Learn More →
                     </a>
                 </div>
@@ -313,11 +326,11 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800/50">
+    <section id="contact" class="py-20 bg-white/50">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-poppins font-bold mb-4 gradient-text">Get In Touch</h2>
-                <p class="text-xl text-gray-300">
+                <p class="text-xl text-gray-600">
                     Ready to transform your business with AI? Let's discuss your project.
                 </p>
             </div>
@@ -326,20 +339,20 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <!-- Contact Form -->
                     <div>
-                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-400">Send a Message</h3>
+                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-600">Send a Message</h3>
                         <form class="space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                             <div>
-                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                                <label for="name" class="block text-sm font-medium text-gray-600 mb-2">Name</label>
                                 <input type="text" id="name" name="name" required 
                                        class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
                             </div>
                             <div>
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                                <label for="email" class="block text-sm font-medium text-gray-600 mb-2">Email</label>
                                 <input type="email" id="email" name="email" required 
                                        class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300">
                             </div>
                             <div>
-                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                                <label for="message" class="block text-sm font-medium text-gray-600 mb-2">Message</label>
                                 <textarea id="message" name="message" rows="5" required 
                                           class="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"></textarea>
                             </div>
@@ -352,7 +365,7 @@
                     
                     <!-- Contact Info & Social -->
                     <div>
-                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-400">Connect With Me</h3>
+                        <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-600">Connect With Me</h3>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-4">
                                 <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -360,7 +373,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold">Location</div>
-                                    <div class="text-gray-300">Dhaka, Bangladesh</div>
+                                    <div class="text-gray-600">Dhaka, Bangladesh</div>
                                 </div>
                             </div>
                             
@@ -370,7 +383,7 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold">Specialization</div>
-                                    <div class="text-gray-300">AI Solutions & Agentic Automations</div>
+                                    <div class="text-gray-600">AI Solutions & Agentic Automations</div>
                                 </div>
                             </div>
                             
@@ -380,31 +393,21 @@
                                 </div>
                                 <div>
                                     <div class="font-semibold">Response Time</div>
-                                    <div class="text-gray-300">Usually within 24 hours</div>
+                                    <div class="text-gray-600">Usually within 24 hours</div>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- Social Media Links -->
                         <div class="mt-8">
-                            <h4 class="text-lg font-semibold mb-4 text-blue-400">Follow Me</h4>
+                            <h4 class="text-lg font-semibold mb-4 text-blue-600">Follow Me</h4>
                             <div class="flex space-x-4">
-                                <a href="#" class="w-12 h-12 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-110 glow">
+                                <a href="https://www.facebook.com/akbar.hossain.3139/" target="_blank" class="w-12 h-12 bg-gray-200/50 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-110 glow">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                                     </svg>
                                 </a>
-                                <a href="#" class="w-12 h-12 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-110 glow">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="w-12 h-12 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-110 glow">
-                                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.746-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
-                                    </svg>
-                                </a>
-                                <a href="#" class="w-12 h-12 bg-gray-700/50 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-110 glow">
+                                <a href="https://github.com/akbaristhe1/Personal-Website" target="_blank" class="w-12 h-12 bg-gray-200/50 rounded-lg flex items-center justify-center hover:bg-blue-500/20 transition-all duration-300 transform hover:scale-110 glow">
                                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                     </svg>
@@ -418,9 +421,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
+    <footer class="bg-white/80 py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-gray-400">
+            <p class="text-gray-600">
                 © <span id="currentYear"></span> Akbar Rafan. All rights reserved.
             </p>
         </div>
@@ -494,9 +497,9 @@
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
-                nav.classList.add('bg-gray-900/80');
+                nav.classList.add('bg-white/90');
             } else {
-                nav.classList.remove('bg-gray-900/80');
+                nav.classList.remove('bg-white/90');
             }
         });
         
