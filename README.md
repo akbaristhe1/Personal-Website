@@ -1,6 +1,6 @@
 # Akbar Rafan - AI Solutions & Agentic Automations Developer Portfolio
 
-A stunning, fully-responsive personal portfolio website showcasing expertise in AI solutions and agentic automations. Built with modern web technologies and featuring glassmorphism design effects, smooth animations, and a professional dark theme.
+A stunning, fully-responsive personal portfolio website showcasing expertise in AI solutions and agentic automations. Built with modern web technologies and featuring a professional light theme with glassmorphism design effects, smooth animations, and integrated personal branding.
 
 ## 🚀 Live Demo
 
@@ -9,10 +9,12 @@ A stunning, fully-responsive personal portfolio website showcasing expertise in 
 ## 📋 Features
 
 ### ✨ Design & User Experience
+- **Professional Light Theme**: Clean, modern design with excellent readability
 - **Glassmorphism Effects**: Modern translucent design with backdrop blur effects
 - **Responsive Design**: Fully responsive across all device sizes (mobile, tablet, desktop)
 - **Smooth Animations**: Particle background, hover effects, and scroll-triggered animations
-- **Professional Dark Theme**: Elegant color scheme with blue accent colors
+- **AI Logo Integration**: Custom logo representing human-AI fusion
+- **Professional Profile Picture**: Integrated actual headshot with circular frame
 - **Gradient Text Effects**: Eye-catching gradient text for headings
 - **Custom Scrollbar**: Styled scrollbar matching the theme
 
@@ -20,12 +22,12 @@ A stunning, fully-responsive personal portfolio website showcasing expertise in 
 - **Sticky Navigation**: Glassmorphism navigation bar with smooth scrolling
 - **Mobile Menu**: Hamburger menu for mobile devices
 - **Contact Form**: Formspree-ready contact form with validation
-- **Social Media Integration**: Social media icons with hover effects
+- **Social Media Integration**: Direct links to Facebook and GitHub profiles
 - **Auto-updating Footer**: Copyright year updates automatically
 - **Performance Optimized**: Fast loading with optimized animations
 
 ### 📱 Sections
-1. **Hero Section**: Full viewport with animated particle background and profile image
+1. **Hero Section**: Full viewport with animated particle background, AI logo, and profile image
 2. **About Section**: Professional summary with skills grid
 3. **Projects Section**: Three featured AI projects with detailed descriptions
 4. **Contact Section**: Contact form and social media links
@@ -41,7 +43,7 @@ A stunning, fully-responsive personal portfolio website showcasing expertise in 
 
 ### External Resources
 - **Google Fonts**: Inter (body text) and Poppins (headings)
-- **Unsplash**: Professional profile image
+- **Professional Profile Picture**: `akbar-rafan-profile.jpg.png`
 - **Formspree**: Contact form handling (ready for integration)
 
 ### AI Tools Used in Development
@@ -53,6 +55,8 @@ A stunning, fully-responsive personal portfolio website showcasing expertise in 
   - Created custom CSS for glassmorphism effects and animations
   - Developed JavaScript functionality for interactions and animations
   - Provided code optimization and best practices guidance
+  - Converted entire website from dark to light theme
+  - Integrated actual profile picture and updated social media links
 
 #### 2. **Tailwind CSS Documentation AI**
 - **Purpose**: Utility class selection and responsive design implementation
@@ -72,10 +76,13 @@ A stunning, fully-responsive personal portfolio website showcasing expertise in 
 
 ```
 portfolio-website/
-├── index.html          # Main HTML file (single-file architecture)
-├── README.md           # Project documentation
-├── AI_DEVELOPMENT_REPORT.md  # Development process report
-└── .gitignore          # Git ignore file
+├── index.html                           # Main HTML file (single-file architecture)
+├── akbar-rafan-profile.jpg.png          # Professional profile picture
+├── README.md                            # Project documentation
+├── AI_DEVELOPMENT_REPORT.md             # Development process report
+├── DEPLOYMENT_GUIDE.md                  # Deployment instructions
+├── PROJECT_SUMMARY.md                   # Project overview
+└── .gitignore                           # Git ignore file
 ```
 
 ## 🚀 Setup Instructions
@@ -112,7 +119,7 @@ portfolio-website/
 
 #### Option 1: Netlify (Recommended)
 1. Create a Netlify account
-2. Drag and drop the `index.html` file to Netlify
+2. Drag and drop the `index.html` and `akbar-rafan-profile.jpg.png` files to Netlify
 3. Get instant live URL
 4. Configure custom domain (optional)
 
@@ -131,9 +138,9 @@ portfolio-website/
 
 ### Colors and Theme
 - **Primary Colors**: Blue (#3b82f6), Purple (#8b5cf6), Cyan (#06b6d4)
-- **Background**: Dark gray (#111827)
-- **Text**: White and gray variations
-- **Glassmorphism**: Semi-transparent white/black with backdrop blur
+- **Background**: Light blue gradient (blue-50 to indigo-100)
+- **Text**: Dark gray variations for excellent readability
+- **Glassmorphism**: Semi-transparent white with backdrop blur
 
 ### Typography
 - **Headings**: Poppins font family
@@ -152,7 +159,7 @@ Update the following sections in `index.html`:
 - Name and title in hero section
 - Location and specialization in about section
 - Contact information in contact section
-- Social media links
+- Social media links (already configured)
 
 ### Projects
 Modify the projects section to showcase your work:
@@ -167,6 +174,11 @@ To enable contact form functionality:
 2. Get your form ID
 3. Replace `YOUR_FORM_ID` in the form action attribute
 4. Test form submission
+
+### Social Media Links
+Currently configured:
+- **Facebook**: [https://www.facebook.com/akbar.hossain.3139/](https://www.facebook.com/akbar.hossain.3139/)
+- **GitHub**: [https://github.com/akbaristhe1/Personal-Website](https://github.com/akbaristhe1/Personal-Website)
 
 ## 🔧 Performance Optimization
 
@@ -219,16 +231,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Akbar Rafan**
 - Location: Dhaka, Bangladesh
 - Specialization: AI Solutions & Agentic Automations
-- Email: [Your Email]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- Facebook: [https://www.facebook.com/akbar.hossain.3139/](https://www.facebook.com/akbar.hossain.3139/)
+- GitHub: [https://github.com/akbaristhe1/Personal-Website](https://github.com/akbaristhe1/Personal-Website)
 
 ## 🙏 Acknowledgments
 
 - **Claude AI** for development assistance and code generation
 - **Tailwind CSS** for the utility-first CSS framework
 - **Google Fonts** for beautiful typography
-- **Unsplash** for professional imagery
 - **Formspree** for contact form handling
 
 ---
