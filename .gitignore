@@ -87,3 +87,36 @@ temp/
 
 # TernJS port file
 .tern-port
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Image optimization files
+*.webp
+*.avif
+
+# Local development files
+.local
+.cache/
+
+# IDE specific files
+*.sublime-project
+*.sublime-workspace
+
+# MacOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
