@@ -341,6 +341,10 @@
                     <div>
                         <h3 class="text-2xl font-poppins font-semibold mb-6 text-blue-600">Send a Message</h3>
                         <form class="space-y-6" action="https://formspree.io/f/xgvlrkap" method="POST">
+                            <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio">
+                            <input type="hidden" name="_replyto" value="">
+                            <input type="hidden" name="_next" value="https://tangerine-travesseiro-09f582.netlify.app/#contact">
+                            
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-600 mb-2">Name</label>
                                 <input type="text" id="name" name="name" required 
@@ -526,27 +530,17 @@
             observer.observe(el);
         });
         
-        // Form submission handling (placeholder)
+        // Form submission handling
         const contactForm = document.querySelector('form');
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show success message (in a real implementation, this would submit to Formspree)
+            // Allow form to submit to Formspree
             const button = this.querySelector('button[type="submit"]');
             const originalText = button.textContent;
-            button.textContent = 'Message Sent!';
-            button.classList.add('bg-green-600', 'hover:bg-green-700');
-            button.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            button.textContent = 'Sending...';
+            button.disabled = true;
             
-            // Reset form
-            this.reset();
-            
-            // Reset button after 3 seconds
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.classList.remove('bg-green-600', 'hover:bg-green-700');
-                button.classList.add('bg-blue-600', 'hover:bg-blue-700');
-            }, 3000);
+            // Let the form submit naturally to Formspree
+            // Formspree will handle the submission and redirect
         });
     </script>
 </body>
